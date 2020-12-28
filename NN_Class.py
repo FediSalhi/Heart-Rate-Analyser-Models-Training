@@ -7,7 +7,7 @@ from keras.optimizers import Adam
 
 class NN:
     def __init__(self, input_shape):
-        self.param1 = input_shape
+        self.input_shape = input_shape
 
 
         self.model = None
