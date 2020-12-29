@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34370dd3-630e-4c3f-8235-4581e72d27db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Heart Rate Analyser Models Training.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Heart Rate Analyser Models Training.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_preprocessing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +20,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/data_preprocessing.py" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="1mIN7JqOWxcrNJAe4GqmIRmCYt2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -36,7 +36,28 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.data_preprocessing">
+    <configuration name="data_preprocessing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Heart Rate Analyser Models Training" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_preprocessing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Heart Rate Analyser Models Training" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -81,6 +102,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.data_preprocessing" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -96,40 +118,91 @@
       <option name="presentableId" value="Default" />
       <updated>1609176976165</updated>
     </task>
+    <task id="LOCAL-00001" summary="class NN created">
+      <created>1609185772065</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609185772066</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="class NN created" />
+    <option name="LAST_COMMIT_MESSAGE" value="class NN created" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1507" y="165" width="1094" height="719" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609179372889">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
     <state x="-1507" y="165" width="1094" height="719" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609179372889" />
+    <state x="-1380" y="105" key="CommitChangelistDialog2" timestamp="1609185769781">
+      <screen x="-1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="-1380" y="105" key="CommitChangelistDialog2/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609185769781" />
+    <state width="1299" height="466" key="DebuggerActiveHint" timestamp="1609269012547">
+      <screen x="-1920" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1299" height="466" key="DebuggerActiveHint/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609269012547" />
     <state x="-1181" y="274" key="FileChooserDialogImpl" timestamp="1609179172069">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
     <state x="-1181" y="274" key="FileChooserDialogImpl/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609179172069" />
-    <state width="1898" height="272" key="GridCell.Tab.0.bottom" timestamp="1609185730363">
+    <state width="1898" height="277" key="GridCell.Tab.0.bottom" timestamp="1609268918569">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
-    <state width="1898" height="272" key="GridCell.Tab.0.bottom/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609185730363" />
-    <state width="1898" height="272" key="GridCell.Tab.0.center" timestamp="1609185730362">
+    <state width="1898" height="277" key="GridCell.Tab.0.bottom/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609268918569" />
+    <state width="1898" height="277" key="GridCell.Tab.0.center" timestamp="1609268918569">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
-    <state width="1898" height="272" key="GridCell.Tab.0.center/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609185730362" />
-    <state width="1898" height="272" key="GridCell.Tab.0.left" timestamp="1609185730361">
+    <state width="1898" height="277" key="GridCell.Tab.0.center/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609268918569" />
+    <state width="1898" height="277" key="GridCell.Tab.0.left" timestamp="1609268918569">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
-    <state width="1898" height="272" key="GridCell.Tab.0.left/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609185730361" />
-    <state width="1898" height="272" key="GridCell.Tab.0.right" timestamp="1609185730362">
+    <state width="1898" height="277" key="GridCell.Tab.0.left/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609268918569" />
+    <state width="1898" height="277" key="GridCell.Tab.0.right" timestamp="1609268918569">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
-    <state width="1898" height="272" key="GridCell.Tab.0.right/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609185730362" />
-    <state x="-1460" y="142" width="1221" height="747" key="SettingsEditor" timestamp="1609185677139">
+    <state width="1898" height="277" key="GridCell.Tab.0.right/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609268918569" />
+    <state width="1898" height="277" key="GridCell.Tab.1.bottom" timestamp="1609268927941">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
-    <state x="-1460" y="142" width="1221" height="747" key="SettingsEditor/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609185677139" />
+    <state width="1898" height="277" key="GridCell.Tab.1.bottom/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609268927941" />
+    <state width="1898" height="277" key="GridCell.Tab.1.center" timestamp="1609268927941">
+      <screen x="-1920" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1898" height="277" key="GridCell.Tab.1.center/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609268927941" />
+    <state width="1898" height="277" key="GridCell.Tab.1.left" timestamp="1609268927941">
+      <screen x="-1920" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1898" height="277" key="GridCell.Tab.1.left/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609268927941" />
+    <state width="1898" height="277" key="GridCell.Tab.1.right" timestamp="1609268927941">
+      <screen x="-1920" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1898" height="277" key="GridCell.Tab.1.right/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609268927941" />
+    <state x="-1460" y="142" width="1221" height="747" key="SettingsEditor" timestamp="1609188149678">
+      <screen x="-1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="-1460" y="142" width="1221" height="747" key="SettingsEditor/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609188149678" />
+    <state x="-1369" y="243" key="Vcs.Push.Dialog.v2" timestamp="1609185779270">
+      <screen x="-1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="-1369" y="243" key="Vcs.Push.Dialog.v2/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609185779270" />
     <state x="-1266" y="333" key="com.intellij.ide.util.TipDialog" timestamp="1609185105275">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
     <state x="-1266" y="333" key="com.intellij.ide.util.TipDialog/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609185105275" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/data_preprocessing.py</url>
+          <line>161</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
