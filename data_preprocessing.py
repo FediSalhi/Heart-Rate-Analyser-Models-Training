@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import wfdb
 import  numpy as np
+import random
 
 #################################################### data files ########################################################
 
@@ -155,10 +156,38 @@ all_records_NR_labeled = np.vstack((all_records_NR_labeled,record_NR_10_labeled)
 all_records_NR_labeled = np.vstack((all_records_NR_labeled,record_NR_11_labeled))
 all_records_NR_labeled = np.vstack((all_records_NR_labeled,record_NR_12_labeled))
 
+all_record_NR_ARR_labeled = np.vstack((all_records_NR_labeled, all_records_ARR_labeled))
+
 #TODO: resample data
-print(all_records_NR_labeled)
-
-
-print(record_ARR_1_labeled.shape)
 
 # np.savetxt("foo.csv", record_NR_1, delimiter=",")
+
+def batch_generator(time_window_size, labelled_data_x, labelled_data_y, batch_size):
+    #TODO: to be implemented
+    x_batch = np.zeros((batch_size, time_window_size))
+    y_batch = np.zeros((batch_size,1))
+
+    while (True):
+        for batch_index in range(batch_size):
+            start_idx = random.randint(0, labelled_data_x.shape[0] - time_window_size-1)
+            x_batch[batch_index] = labelled_data_x[start_idx:start_idx + time_window_size]
+            y_batch[batch_index] = labelled_data_y[start_idx + time_window_size]
+
+        yield x_batch, y_batch
+
+def split_data(labelled_data_x, labelled_data_y, val_rate, test_rate):
+
+    number_of_data_point = labelled_data_y.shape[0]
+    train_rate = 1 - (val_rate + test_rate)
+
+    y_train = labelled_data_y[:int(number_of_data_point * train_rate)]
+    x_train = labelled_data_x[:int(number_of_data_point * train_rate)]
+
+    y_val = labelled_data_y[int(number_of_data_point * train_rate) : int(number_of_data_point * (train_rate + val_rate))]
+    x_val = labelled_data_x[int(number_of_data_point * train_rate) : int(number_of_data_point * (train_rate + val_rate))]
+
+    y_test = labelled_data_y[int(number_of_data_point * (train_rate + val_rate)) : number_of_data_point ]
+    x_test = labelled_data_x[int(number_of_data_point * (train_rate + val_rate)) : number_of_data_point ]
+
+    return x_train, y_train, x_val, y_val, x_test, y_test
+
