@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import wfdb
 import  numpy as np
 import random
+from scipy.signal import resample
 
 #################################################### data files ########################################################
 
@@ -141,6 +142,7 @@ all_records_ARR_labeled = np.vstack((all_records_ARR_labeled,record_ARR_10_label
 all_records_ARR_labeled = np.vstack((all_records_ARR_labeled,record_ARR_11_labeled))
 all_records_ARR_labeled = np.vstack((all_records_ARR_labeled,record_ARR_12_labeled))
 
+all_records_ARR_labeled_reduced = all_records_ARR_labeled[:7200000,:]
 
 #------------------------- Normal rhythm fetus --------------------------
 
@@ -156,7 +158,10 @@ all_records_NR_labeled = np.vstack((all_records_NR_labeled,record_NR_10_labeled)
 all_records_NR_labeled = np.vstack((all_records_NR_labeled,record_NR_11_labeled))
 all_records_NR_labeled = np.vstack((all_records_NR_labeled,record_NR_12_labeled))
 
-all_record_NR_ARR_labeled = np.vstack((all_records_NR_labeled, all_records_ARR_labeled))
+all_records_NR_labeled_reduced = all_records_NR_labeled[:7200000,:]
+
+
+################################################# shuffl #################################################
 
 #TODO: resample data
 
@@ -170,7 +175,7 @@ def batch_generator(time_window_size, labelled_data_x, labelled_data_y, batch_si
     while (True):
         for batch_index in range(batch_size):
             start_idx = random.randint(0, labelled_data_x.shape[0] - time_window_size-1)
-            x_batch[batch_index] = labelled_data_x[start_idx:start_idx + time_window_size]
+            x_batch[batch_index] = labelled_data_x[start_idx:start_idx + time_window_size].reshape(-1,)
             y_batch[batch_index] = labelled_data_y[start_idx + time_window_size]
 
         yield x_batch, y_batch
@@ -189,5 +194,16 @@ def split_data(labelled_data_x, labelled_data_y, val_rate, test_rate):
     y_test = labelled_data_y[int(number_of_data_point * (train_rate + val_rate)) : number_of_data_point ]
     x_test = labelled_data_x[int(number_of_data_point * (train_rate + val_rate)) : number_of_data_point ]
 
-    return x_train, y_train, x_val, y_val, x_test, y_test
+    return x_train.reshape(-1,1), y_train.reshape(-1,1), x_val.reshape(-1,1), y_val.reshape(-1,1), x_test.reshape(-1,1), y_test.reshape(-1,1)
 
+def combine_shufle_signal(all_records_NR_labeled_reduced, all_records_ARR_labeled_reduced):
+    selector = 1
+    all_records_NR_ARR_labeled_shuffled = np.zeros((7200000,2))
+    for i in range(0,7200000-1000,1000):
+        if (selector == 1):
+            all_records_NR_ARR_labeled_shuffled[i:i+1000,:] = all_records_NR_labeled_reduced[i:i+1000,:]
+            selector = 0
+        else:
+            all_records_NR_ARR_labeled_shuffled[i:i+1000,:] = all_records_ARR_labeled_reduced[i:i+1000,:]
+            selector = 1
+    return all_records_NR_ARR_labeled_shuffled

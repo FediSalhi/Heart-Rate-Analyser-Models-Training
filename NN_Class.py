@@ -4,6 +4,7 @@ from keras.activations import relu
 from keras.activations import sigmoid
 from keras.optimizers import Adam
 from data_preprocessing import *
+from keras.layers import BatchNormalization
 
 
 class NN:
@@ -19,13 +20,17 @@ class NN:
 
     def create_model(self):
         self.model = Sequential()
-        self.model.add(Dense(32, 'relu', input_shape=self.input_shape))
-        self.model.add(Dense(64, 'sigmoid'))
+        self.model.add(Dense(128, 'tanh', input_shape=self.input_shape))
+        self.model.add(BatchNormalization())
+        self.model.add(Dense(64, 'linear'))
+        self.model.add(BatchNormalization())
+        self.model.add(Dense(32, 'relu'))
+        self.model.add(BatchNormalization())
         self.model.add(Dense(1, 'sigmoid'))
 
     def compile_model(self):
 
-        self.model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['binary_accuracy'])
+        self.model.compile(loss='mse', optimizer='sgd', metrics=['mse'])
 
         self.model.summary()
 
