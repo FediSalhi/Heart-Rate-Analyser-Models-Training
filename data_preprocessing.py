@@ -4,6 +4,7 @@ import wfdb
 import  numpy as np
 import random
 from scipy.signal import resample
+from parameters import *
 
 #################################################### data files ########################################################
 
@@ -83,7 +84,7 @@ record_ARR_8_labeled  = np.ones((record_ARR_8.shape[0], 2))
 record_ARR_9_labeled  = np.ones((record_ARR_9.shape[0], 2))
 record_ARR_10_labeled = np.ones((record_ARR_10.shape[0], 2))
 record_ARR_11_labeled = np.ones((record_ARR_11.shape[0], 2))
-record_ARR_12_labeled = np.ones((record_ARR_11.shape[0], 2))
+record_ARR_12_labeled = np.ones((record_ARR_12.shape[0], 2))
 
 record_ARR_1_labeled[:,0]  = record_ARR_1[:,0]
 record_ARR_2_labeled[:,0]  = record_ARR_2[:,0]
@@ -167,16 +168,24 @@ all_records_NR_labeled_reduced = all_records_NR_labeled[:7200000,:]
 
 # np.savetxt("foo.csv", record_NR_1, delimiter=",")
 
+
 def batch_generator(time_window_size, labelled_data_x, labelled_data_y, batch_size):
     #TODO: to be implemented
-    x_batch = np.zeros((batch_size, time_window_size))
+    x_batch = np.zeros((batch_size, time_window_size,1))
     y_batch = np.zeros((batch_size,1))
 
+    signal_index = 0
+    start_idx = signal_index
+
     while (True):
+
         for batch_index in range(batch_size):
-            start_idx = random.randint(0, labelled_data_x.shape[0] - time_window_size-1)
-            x_batch[batch_index] = labelled_data_x[start_idx:start_idx + time_window_size].reshape(-1,)
+
+            x_batch[batch_index] = labelled_data_x[start_idx:start_idx + time_window_size].reshape(-1,1)
             y_batch[batch_index] = labelled_data_y[start_idx + time_window_size]
+            start_idx += time_window_size
+            if (start_idx >=  labelled_data_x.shape[0] - time_window_size):
+                start_idx = 0
 
         yield x_batch, y_batch
 

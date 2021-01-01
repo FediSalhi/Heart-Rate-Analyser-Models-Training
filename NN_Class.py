@@ -5,6 +5,12 @@ from keras.activations import sigmoid
 from keras.optimizers import Adam
 from data_preprocessing import *
 from keras.layers import BatchNormalization
+from keras.optimizers import SGD
+from keras.layers import Dropout
+from keras.layers import LSTM
+from keras.layers import Conv1D
+from keras.layers import MaxPooling1D
+from keras.layers import Flatten
 
 
 class NN:
@@ -20,17 +26,17 @@ class NN:
 
     def create_model(self):
         self.model = Sequential()
-        self.model.add(Dense(128, 'tanh', input_shape=self.input_shape))
+        self.model.add(Conv1D(filters=4, kernel_size=5, padding='same', activation='relu', input_shape=(TIME_STEPS, 1)))
+        self.model.add(MaxPooling1D(pool_size=4))
+        self.model.add(Dropout(0.3))
         self.model.add(BatchNormalization())
-        self.model.add(Dense(64, 'linear'))
-        self.model.add(BatchNormalization())
-        self.model.add(Dense(32, 'relu'))
-        self.model.add(BatchNormalization())
+        self.model.add(Flatten())
+        self.model.add(Dense(8, 'relu'))
         self.model.add(Dense(1, 'sigmoid'))
 
     def compile_model(self):
 
-        self.model.compile(loss='mse', optimizer='sgd', metrics=['mse'])
+        self.model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
         self.model.summary()
 

@@ -1,10 +1,11 @@
 ##################################################### NN paramters #####################################################
-VALIDATION_RATE = 0.40
-TEST_RATE = 0.15
-TIME_STEPS = 50
+VALIDATION_RATE = 0.3
+TEST_RATE = 0.1
+TIME_STEPS = 1000
+
 BATCH_SIZE = 1000
-INPUT_SHAPE = (TIME_STEPS, 1)
-STEPS_PER_EPOCH = 100
+INPUT_SHAPE = (TIME_STEPS,1)
+STEPS_PER_EPOCH = 10
 EPOCHS = 100
-VALIDATION_STEPS = 100
+VALIDATION_STEPS = 10
 
