@@ -11,6 +11,9 @@ from keras.layers import LSTM
 from keras.layers import Conv1D
 from keras.layers import MaxPooling1D
 from keras.layers import Flatten
+from keras.callbacks import EarlyStopping
+from keras.callbacks import ModelCheckpoint
+from keras.callbacks import ReduceLROnPlateau
 
 
 class NN:
@@ -23,6 +26,7 @@ class NN:
         self.train_gen = train_gen
         self.valid_gen = val_gen
         self.model = None
+        self.history = None
 
     def create_model(self):
         self.model = Sequential()
@@ -41,13 +45,37 @@ class NN:
         self.model.summary()
 
     def fit_model(self):
-        self.model.fit_generator(generator=self.train_gen,
-                                 validation_data=self.valid_gen,
-                                 epochs=self.epochs,
-                                 steps_per_epoch=self.steps_per_epoch,
-                                 validation_steps=self.validation_steps,
-                                 shuffle=False)
+        earlyStopping = EarlyStopping(monitor='val_loss', patience=10, verbose=0, mode='min')
+        mcp_save = ModelCheckpoint('model.h5', save_best_only=True, monitor='val_loss', mode='min')
+        reduce_lr_loss = ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=7, verbose=1, epsilon=1e-4,
+                                           mode='min')
 
-    def show_summary(self):
-        self.model.summary()
+
+        self.history = self.model.fit_generator(generator=self.train_gen,
+                                            validation_data=self.valid_gen,
+                                            epochs=self.epochs,
+                                            steps_per_epoch=self.steps_per_epoch,
+                                            validation_steps=self.validation_steps,
+                                            callbacks=[earlyStopping, mcp_save, reduce_lr_loss],
+                                            shuffle=False)
+
+    def plot_trainig_history(self):
+        # list all data in history
+        print(self.history.history.keys())
+        # summarize history for accuracy
+        plt.plot(self.history.history['accuracy'])
+        plt.plot(self.history.history['val_accuracy'])
+        plt.title('model accuracy')
+        plt.ylabel('accuracy')
+        plt.xlabel('epoch')
+        plt.legend(['train', 'validation'], loc='upper left')
+        plt.show()
+        # summarize history for loss
+        plt.plot(self.history.history['loss'])
+        plt.plot(self.history.history['val_loss'])
+        plt.title('model loss')
+        plt.ylabel('loss')
+        plt.xlabel('epoch')
+        plt.legend(['train', 'validation'], loc='upper left')
+        plt.show()
 

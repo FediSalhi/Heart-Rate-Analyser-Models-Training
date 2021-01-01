@@ -55,7 +55,8 @@ if __name__ == '__main__':
     #
     nn_model = NN(INPUT_SHAPE, STEPS_PER_EPOCH, EPOCHS, VALIDATION_STEPS, train_gen, val_gen)
     nn_model.create_model()
-    nn_model.compile_model()
-    nn_model.fit_model()
+    # nn_model.compile_model()
+    # nn_model.fit_model()
+    nn_model.plot_trainig_history()
 
 

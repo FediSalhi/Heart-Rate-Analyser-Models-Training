@@ -4,9 +4,7 @@
     <list default="true" id="34370dd3-630e-4c3f-8235-4581e72d27db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NN_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/NN_Class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preprocessing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/parameters.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +22,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/NN_Class.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/main.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/data_preprocessing.py" root0="SKIP_INSPECTION" />
   </component>
@@ -150,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609445501972</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="model trained">
+      <created>1609532861043</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609532861043</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -158,17 +164,19 @@
     <MESSAGE value="data preprocessing" />
     <MESSAGE value="train started" />
     <MESSAGE value="model optimized" />
-    <option name="LAST_COMMIT_MESSAGE" value="model optimized" />
+    <MESSAGE value="model trained" />
+    <option name="LAST_COMMIT_MESSAGE" value="model trained" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1507" y="165" width="1094" height="719" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609179372889">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
     <state x="-1507" y="165" width="1094" height="719" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609179372889" />
-    <state x="-1380" y="105" key="CommitChangelistDialog2" timestamp="1609445498993">
-      <screen x="-1920" y="0" width="1920" height="1032" />
+    <state x="432" y="14" key="CommitChangelistDialog2" timestamp="1609535098788">
+      <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="-1380" y="105" key="CommitChangelistDialog2/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609445498993" />
+    <state x="-1380" y="105" key="CommitChangelistDialog2/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609532858545" />
+    <state x="432" y="14" key="CommitChangelistDialog2/0.0.1536.826/-1920.0.1920.1032@0.0.1536.826" timestamp="1609535098788" />
     <state width="1334" height="466" key="DebuggerActiveHint" timestamp="1609519005767">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
@@ -177,22 +185,26 @@
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
     <state x="-1181" y="274" key="FileChooserDialogImpl/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609179172069" />
-    <state width="1898" height="228" key="GridCell.Tab.0.bottom" timestamp="1609530845553">
-      <screen x="-1920" y="0" width="1920" height="1032" />
+    <state width="1514" height="231" key="GridCell.Tab.0.bottom" timestamp="1609534740905">
+      <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1898" height="228" key="GridCell.Tab.0.bottom/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609530845553" />
-    <state width="1898" height="228" key="GridCell.Tab.0.center" timestamp="1609530845553">
-      <screen x="-1920" y="0" width="1920" height="1032" />
+    <state width="1898" height="231" key="GridCell.Tab.0.bottom/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609534138956" />
+    <state width="1514" height="231" key="GridCell.Tab.0.bottom/0.0.1536.826/-1920.0.1920.1032@0.0.1536.826" timestamp="1609534740905" />
+    <state width="1514" height="231" key="GridCell.Tab.0.center" timestamp="1609534740905">
+      <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1898" height="228" key="GridCell.Tab.0.center/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609530845553" />
-    <state width="1898" height="228" key="GridCell.Tab.0.left" timestamp="1609530845552">
-      <screen x="-1920" y="0" width="1920" height="1032" />
+    <state width="1898" height="231" key="GridCell.Tab.0.center/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609534138956" />
+    <state width="1514" height="231" key="GridCell.Tab.0.center/0.0.1536.826/-1920.0.1920.1032@0.0.1536.826" timestamp="1609534740905" />
+    <state width="1514" height="231" key="GridCell.Tab.0.left" timestamp="1609534740905">
+      <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1898" height="228" key="GridCell.Tab.0.left/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609530845552" />
-    <state width="1898" height="228" key="GridCell.Tab.0.right" timestamp="1609530845553">
-      <screen x="-1920" y="0" width="1920" height="1032" />
+    <state width="1898" height="231" key="GridCell.Tab.0.left/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609534138956" />
+    <state width="1514" height="231" key="GridCell.Tab.0.left/0.0.1536.826/-1920.0.1920.1032@0.0.1536.826" timestamp="1609534740905" />
+    <state width="1514" height="231" key="GridCell.Tab.0.right" timestamp="1609534740905">
+      <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1898" height="228" key="GridCell.Tab.0.right/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609530845553" />
+    <state width="1898" height="231" key="GridCell.Tab.0.right/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609534138956" />
+    <state width="1514" height="231" key="GridCell.Tab.0.right/0.0.1536.826/-1920.0.1920.1032@0.0.1536.826" timestamp="1609534740905" />
     <state width="1898" height="112" key="GridCell.Tab.1.bottom" timestamp="1609522537935">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
@@ -213,10 +225,10 @@
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
     <state x="-1460" y="142" width="1221" height="747" key="SettingsEditor/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609440005340" />
-    <state x="-1369" y="243" key="Vcs.Push.Dialog.v2" timestamp="1609445506850">
+    <state x="-1369" y="243" key="Vcs.Push.Dialog.v2" timestamp="1609532870223">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
-    <state x="-1369" y="243" key="Vcs.Push.Dialog.v2/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609445506850" />
+    <state x="-1369" y="243" key="Vcs.Push.Dialog.v2/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609532870223" />
     <state x="-1266" y="333" key="com.intellij.ide.util.TipDialog" timestamp="1609185105275">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
