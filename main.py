@@ -8,6 +8,7 @@ from sklearn.preprocessing import StandardScaler
 from scipy.signal import resample
 import matplotlib.pyplot as plt
 from keras.layers import LSTM
+from keras.models import load_model
 
 
 if __name__ == '__main__':
@@ -20,8 +21,8 @@ if __name__ == '__main__':
     all_record_NR_ARR_labeled_y = all_records_NR_ARR_labeled_shuffled[:, 1]
 
     #reduce data
-    all_record_NR_ARR_labeled_x = all_record_NR_ARR_labeled_x[0:600000]
-    all_record_NR_ARR_labeled_y = all_record_NR_ARR_labeled_y[0:600000]
+    all_record_NR_ARR_labeled_x = all_record_NR_ARR_labeled_x[0:NUMBER_OF_REDUCED_DATA]
+    all_record_NR_ARR_labeled_y = all_record_NR_ARR_labeled_y[0:NUMBER_OF_REDUCED_DATA]
 
 
 
@@ -40,8 +41,12 @@ if __name__ == '__main__':
     x_train_scaled = scaler.transform(x_train)
     x_val_scaled = scaler.transform(x_val)
 
-    plt.plot(x_train_scaled)
-    plt.plot(y_train)
+    plt.plot(x_train_scaled, label='ECG Signal')
+    plt.plot(y_train, label='Label: "0:Normal Rhythm" "1:Arrhythmia" ')
+    plt.title("ECG Dataset")
+    plt.legend()
+    plt.xlabel("Sample Point")
+    plt.ylabel("Scaled Signal Amplitude (Standard Scaler)")
     plt.show()
 
 
@@ -53,10 +58,8 @@ if __name__ == '__main__':
     # plt.plot(all_record_NR_ARR_labeled_x[0:10000])
     # plt.show()
     #
-    nn_model = NN(INPUT_SHAPE, STEPS_PER_EPOCH, EPOCHS, VALIDATION_STEPS, train_gen, val_gen)
-    nn_model.create_model()
+    # nn_model = NN(INPUT_SHAPE, STEPS_PER_EPOCH, EPOCHS, VALIDATION_STEPS, train_gen, val_gen)
+    # nn_model.create_model()
     # nn_model.compile_model()
     # nn_model.fit_model()
-    nn_model.plot_trainig_history()
-
-
+    # nn_model.plot_trainig_history()

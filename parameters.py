@@ -8,4 +8,7 @@ INPUT_SHAPE = (TIME_STEPS,1)
 STEPS_PER_EPOCH = 10
 EPOCHS = 100
 VALIDATION_STEPS = 10
+NUMBER_OF_REDUCED_DATA = 600000
 
+##################################################### Test paramters ###################################################
+NUMBER_OF_TEST_CHUNKS = 6
