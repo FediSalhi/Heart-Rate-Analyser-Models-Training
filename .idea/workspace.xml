@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34370dd3-630e-4c3f-8235-4581e72d27db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/off_line_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/real_time_test_process.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/parameters.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609535214761</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="test script added">
+      <created>1609791140815</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609791140870</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -219,18 +223,19 @@
     <MESSAGE value="model optimized" />
     <MESSAGE value="model trained" />
     <MESSAGE value="model saved" />
-    <option name="LAST_COMMIT_MESSAGE" value="model saved" />
+    <MESSAGE value="test script added" />
+    <option name="LAST_COMMIT_MESSAGE" value="test script added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1507" y="165" width="1094" height="719" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609179372889">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
     <state x="-1507" y="165" width="1094" height="719" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609179372889" />
-    <state x="432" y="14" key="CommitChangelistDialog2" timestamp="1609535213643">
+    <state x="432" y="14" key="CommitChangelistDialog2" timestamp="1609791139456">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="-1380" y="105" key="CommitChangelistDialog2/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609532858545" />
-    <state x="432" y="14" key="CommitChangelistDialog2/0.0.1536.826/-1920.0.1920.1032@0.0.1536.826" timestamp="1609535213643" />
+    <state x="432" y="14" key="CommitChangelistDialog2/0.0.1536.826/-1920.0.1920.1032@0.0.1536.826" timestamp="1609791139456" />
     <state width="1334" height="466" key="DebuggerActiveHint" timestamp="1609519005767">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
@@ -280,11 +285,11 @@
     </state>
     <state x="-1460" y="142" width="1221" height="747" key="SettingsEditor/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609440005340" />
     <state x="272" y="19" width="977" height="737" key="SettingsEditor/0.0.1536.826/-1920.0.1920.1032@0.0.1536.826" timestamp="1609666157078" />
-    <state x="441" y="194" key="Vcs.Push.Dialog.v2" timestamp="1609535222457">
+    <state x="441" y="194" key="Vcs.Push.Dialog.v2" timestamp="1609791147919">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="-1369" y="243" key="Vcs.Push.Dialog.v2/0.0.1536.826/-1920.0.1920.1032@-1920.0.1920.1032" timestamp="1609532870223" />
-    <state x="441" y="194" key="Vcs.Push.Dialog.v2/0.0.1536.826/-1920.0.1920.1032@0.0.1536.826" timestamp="1609535222457" />
+    <state x="441" y="194" key="Vcs.Push.Dialog.v2/0.0.1536.826/-1920.0.1920.1032@0.0.1536.826" timestamp="1609791147919" />
     <state x="-1266" y="333" key="com.intellij.ide.util.TipDialog" timestamp="1609185105275">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>

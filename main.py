@@ -30,10 +30,6 @@ if __name__ == '__main__':
                                                                 all_record_NR_ARR_labeled_y,
                                                                 VALIDATION_RATE,
                                                                 TEST_RATE)
-
-
-
-
     #scale data
     scaler = StandardScaler()
     scaler = scaler.fit(x_train)
